@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitch Streams</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+ </head>
+  <body>
+     <div class="container-fluid">
+  <h1 class="text-center">Twitch Streams</h1>
+  <br>
+  <div class="container"id="navbar">
+ <ul class="nav nav-pills">
+    <li ><a href="#">Home</a></li>
+    <li id="Online"><a href="#">Online</a></li>
+    <li id="Offline"><a href="#">Offline</a></li>
+   </ul>
+</div>
+  <div id="main" class="container">
+    <h3>Here are some streams you might want to check out</h3>
+    <ul>
+      <li id="display"><a href="">FreeCodeCamp</a></li>
+      <p id="status"></p>
+      <p id="game"></p>
+      <li id="display1"><a href="">ESL_SC2</a></li>
+      <p id="status1"></p>
+      <p id="game1"></p>
+      <li id="display2"><a href="">OgamingSC2</a></li>
+      <p id="status2"></p>
+      <p id="game2"></p>
+    </ul>
+  </div>
+  <div>
+    <input class="from-control" id="searchTerm">
+    <button id="search" type="button" class="btn btn-primary">Search</button>
+    <ul class = "text-left" id="output"></ul>
+    <ul class = "text-left" id="output2"></ul>
+    
+</div>
+</div>
+  </body>
+</html>
