@@ -63,26 +63,24 @@ $(document).ready(function() {
   // find stream
 
    $("#search").click(function(){
-   	 var searchTerm = $("#searchTerm").val();
-     var streamUrl = 'https://wind-bow.gomix.me/twitch-api/streams/' + searchTerm
+     var searchTerm = $("#searchTerm").val();
+     var streamUrl = 'https://wind-bow.gomix.me/twitch-api/users/' + searchTerm
 
-   	 $.ajax({
+       $.ajax({
     url: streamUrl,
     dataType: 'jsonp',
     success: function(data){
-       if(data.stream === null){
-       	console.log(data.stream);
-       $("#output").html("offline");
-     }else{
-        console.log(searchTerm + " " +"is online");
-        $("#output").html("<a href=" + "https://www.twitch.tv/" + searchTerm + ">" + searchTerm + "</a>" + " " + "online" + " " + "playing -" + " " + data.stream.game);
-     };
-   }
+          if(data.status === 404){
+            $("#output").html(data.message);
+          }else{
+            $("#output").html("<a href=" + "https://www.twitch.tv/" + searchTerm + ">" + searchTerm + "</a>");
+          }
+       }
         
-  });
+      });
    
- })
-  
+    
+   });
 
 });
 
