@@ -1,55 +1,5 @@
 $(document).ready(function() {
 
-  $.ajax({
-    url: 'https://wind-bow.gomix.me/twitch-api/streams/freecodecamp',
-    dataType: 'jsonp',
-    success: function(data){
-      if(data.stream === null){
-       	console.log(data.stream);
-       $("#status").html("offline");
-      $("#stream").toggleClass("offline");
-     }else{
-        console.log("online");
-        $("#status").html("online");
-        $("#game").html("currently playing -" + " " + data.stream.game);
-         
-     };
-   }
-});
-
-  $.ajax({
-    url: 'https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2',
-    dataType: 'jsonp',
-    success: function(data){
-      if(data.stream === null){
-       	console.log(data.stream);
-       $("#status").html("offline");
-       $("#stream").toggleClass("offline");
-     }else{
-        console.log("online");
-        $("#status1").html("online");
-        $("#game1").html("currently playing -" + " " + data.stream.game);
-        
-     };
-   }
-});
-
-   $.ajax({
-    url: 'https://wind-bow.gomix.me/twitch-api/streams/OgamingSC2',
-    dataType: 'jsonp',
-    success: function(data){
-      if(data.stream === null){
-       	console.log(data.stream);
-       $("#status2").html("offline");
-       $("#stream").toggleClass("offline");
-     }else{
-        console.log("online");
-        $("#status2").html("online");
-        $("#game2").html("currently playing -" + " " + data.stream.game);
-     };
-   }
-});
-
    // page redirects
      $("#display").click(function() {
       window.open('https://www.twitch.tv/freecodecamp');
