@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-
-  
  $.ajax({
     url: 'https://wind-bow.gomix.me/twitch-api/streams/freecodecamp',
     dataType: 'jsonp',
