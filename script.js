@@ -1,16 +1,18 @@
 $(document).ready(function() {
 
- $.ajax({
+  $.ajax({
     url: 'https://wind-bow.gomix.me/twitch-api/streams/freecodecamp',
     dataType: 'jsonp',
     success: function(data){
       if(data.stream === null){
        	console.log(data.stream);
        $("#status").html("offline");
+      $("#stream").toggleClass("offline");
      }else{
         console.log("online");
         $("#status").html("online");
         $("#game").html("currently playing -" + " " + data.stream.game);
+         
      };
    }
 });
@@ -22,10 +24,12 @@ $(document).ready(function() {
       if(data.stream === null){
        	console.log(data.stream);
        $("#status").html("offline");
+       $("#stream").toggleClass("offline");
      }else{
         console.log("online");
         $("#status1").html("online");
         $("#game1").html("currently playing -" + " " + data.stream.game);
+        
      };
    }
 });
@@ -37,6 +41,7 @@ $(document).ready(function() {
       if(data.stream === null){
        	console.log(data.stream);
        $("#status2").html("offline");
+       $("#stream").toggleClass("offline");
      }else{
         console.log("online");
         $("#status2").html("online");
@@ -62,9 +67,9 @@ $(document).ready(function() {
 
    $("#search").click(function(){
      var searchTerm = $("#searchTerm").val();
-     var streamUrl = 'https://wind-bow.gomix.me/twitch-api/users/' + searchTerm
+     var streamUrl = 'https://wind-bow.gomix.me/twitch-api/users/' + searchTerm;
 
-       $.ajax({
+    $.ajax({
     url: streamUrl,
     dataType: 'jsonp',
     success: function(data){
@@ -76,8 +81,6 @@ $(document).ready(function() {
        }
         
       });
-   
-    
    });
 
 });

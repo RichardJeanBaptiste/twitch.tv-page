@@ -9,17 +9,28 @@
   <script type="text/javascript" src="script.js"></script>
  </head>
   <body>
-     <div class="container-fluid">
+     <div class="container">
   <h1 class="text-center">Twitch Streams</h1>
   <br>
-  <div class="container"id="navbar">
- <ul class="nav nav-pills">
-    <li ><a href="#">Home</a></li>
-    <li id="Online"><a href="#">Online</a></li>
-    <li id="Offline"><a href="#">Offline</a></li>
-   </ul>
+  
+ <div class="container">
+  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Online Now</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <p id="stream"><a href="https://www.twitch.tv/freecodecamp">Freecodecamp</a></p>
+       <p id="stream"><a href="https://www.twitch.tv/ESL_SC2">ESL_SC2</a></p>
+       <p id="stream"><a href="https://www.twitch.tv/OgamingSC2">OgamingSC2</a></p>
+    </div>
+    
+  </div>
 </div>
-  <div id="main" class="container">
+
+
+  <div id="main">
     <h3>Here are some streams you might want to check out</h3>
     <ul>
       <li id="display"><a href="">FreeCodeCamp</a></li>
@@ -33,7 +44,9 @@
       <p id="game2"></p>
     </ul>
   </div>
-  <div>
+
+
+<div>
     <input class="from-control" id="searchTerm">
     <button id="search" type="button" class="btn btn-primary">Search</button>
     <ul class = "text-left" id="output"></ul>
@@ -41,5 +54,6 @@
     
 </div>
 </div>
+
   </body>
 </html>
