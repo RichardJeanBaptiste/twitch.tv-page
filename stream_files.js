@@ -35,7 +35,7 @@ $(document).ready(function() {
 });
 
    $.ajax({
-    url: 'https://wind-bow.gomix.me/twitch-api/streams/OgamingSC2',
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/NALCS1',
     dataType: 'jsonp',
     success: function(data){
       if(data.stream === null){
@@ -209,6 +209,82 @@ $(document).ready(function() {
       };
    }
 });
+
+    $.ajax({
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/trick2g',
+    dataType: 'jsonp',
+    success: function(data){
+      if(data.stream === null){
+        //console.log(data.stream);
+      } else {
+        $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/" + data.stream.channel.display_name + ">" + data.stream.channel.display_name + "</a></p>");
+      };
+   }
+});
+
+    $.ajax({
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/TrumpSC',
+    dataType: 'jsonp',
+    success: function(data){
+      if(data.stream === null){
+        //console.log(data.stream);
+      } else {
+        $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/" + data.stream.channel.display_name + ">" + data.stream.channel.display_name + "</a></p>");
+      };
+   }
+});
+
+   $.ajax({
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/Savjz',
+    dataType: 'jsonp',
+    success: function(data){
+      if(data.stream === null){
+        //console.log(data.stream);
+      } else {
+        $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/" + data.stream.channel.display_name + ">" + data.stream.channel.display_name + "</a></p>");
+      };
+   }
+});
+
+    $.ajax({
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/dota2ti',
+    dataType: 'jsonp',
+    success: function(data){
+      if(data.stream === null){
+        //console.log(data.stream);
+      } else {
+        $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/" + data.stream.channel.display_name + ">" + data.stream.channel.display_name + "</a></p>");
+      };
+   }
+});
+
+
+     $.ajax({
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/dota2ti_crowd',
+    dataType: 'jsonp',
+    success: function(data){
+      if(data.stream === null){
+        //console.log(data.stream);
+      } else {
+        $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/" + data.stream.channel.display_name + ">" + data.stream.channel.display_name + "</a></p>");
+      };
+   }
+});
+
+      $.ajax({
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/anisajomha',
+    dataType: 'jsonp',
+    success: function(data){
+      if(data.stream === null){
+        //console.log(data.stream);
+      } else {
+        $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/" + data.stream.channel.display_name + ">" + data.stream.channel.display_name + "</a></p>");
+      };
+   }
+});
+  
+  
+  
   
 
 });
