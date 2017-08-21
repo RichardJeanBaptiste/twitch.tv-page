@@ -10,8 +10,13 @@ $(document).ready(function() {
   });
 
       $("#display2").click(function() {
-      window.open('https://www.twitch.tv/ogamingsc2');
+      window.open('https://www.twitch.tv/nalcs1');
     });
+
+      $("#display3").click(function() {
+      window.open('https://www.twitch.tv/overwatchcontenders');
+    });
+
 
   // find stream
 

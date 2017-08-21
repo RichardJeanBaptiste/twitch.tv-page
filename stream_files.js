@@ -33,7 +33,7 @@ $(document).ready(function() {
      };
    }
 });
-
+  
    $.ajax({
     url: 'https://wind-bow.gomix.me/twitch-api/streams/NALCS1',
     dataType: 'jsonp',
@@ -42,10 +42,28 @@ $(document).ready(function() {
        	
        $("#status2").html("offline");
        $("#stream").toggleClass("offline");
-     }else{
+}else{
         console.log("online");
         $("#status2").html("online");
         $("#game2").html("currently playing -" + " " + data.stream.game);
+        $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/nalcs1" + ">" + data.stream.channel.display_name + "</a></p>");
+     };
+   }
+});
+
+
+   $.ajax({
+    url: 'https://wind-bow.gomix.me/twitch-api/streams/overwatchcontenders',
+    dataType: 'jsonp',
+    success: function(data){
+      if(data.stream === null){
+        
+       $("#status3").html("offline");
+       $("#stream").toggleClass("offline");
+     }else{
+        console.log("online");
+        $("#status3").html("online");
+        $("#game3").html("currently playing -" + " " + data.stream.game);
         $("#home").append("<p " + ">" + "<a href=" + "https://www.twitch.tv/" + data.stream.channel.display_name + ">" + data.stream.channel.display_name + "</a></p>");
      };
    }
